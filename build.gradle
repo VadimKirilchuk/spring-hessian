@@ -20,4 +20,5 @@ subprojects {
    ext.junitVersion='4.11'
    ext.springVersion='3.2.2.RELEASE'
    ext.hessianVersion='4.0.7'
+   ext.groovyVersion='2.1.3'
 }

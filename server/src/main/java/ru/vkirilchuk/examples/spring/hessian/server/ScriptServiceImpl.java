@@ -19,7 +19,7 @@ public class ScriptServiceImpl implements ScriptService {
         String type = script.getType();
         String text = script.getText();
 
-        ScriptEngine engine =scriptEngineFactory.getEngineByName(type);
+        ScriptEngine engine = scriptEngineFactory.getEngineByName(type);
         return engine.eval(text);
     }
 }
