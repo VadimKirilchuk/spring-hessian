@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"> 
+    
+    <bean id="scriptService" class="ru.vkirilchuk.examples.spring.hessian.server.ScriptServiceImpl">
+         <constructor-arg><bean class="javax.script.ScriptEngineManager"></bean></constructor-arg>
+    </bean>
+        
+    <bean name="/ScriptService" class="org.springframework.remoting.caucho.HessianServiceExporter" > 
+        <property name="service" ref="scriptService"/> 
+        <property name="serviceInterface" value="ru.vkirilchuk.examples.spring.hessian.api.ScriptService"/> 
+    </bean> 
+
+</beans>

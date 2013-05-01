@@ -1,0 +1,23 @@
+defaultTasks 'build'
+group = 'ru.vkirilchuk.examples'
+version = '1.0'
+
+allprojects {
+   repositories {
+      mavenCentral()
+   }
+
+   apply plugin: 'idea'
+   apply plugin: 'eclipse'
+
+   apply plugin: 'java'
+   sourceCompatibility = 1.6
+   targetCompatibility = 1.6
+}
+
+subprojects {
+   // common dependencies versions
+   ext.junitVersion='4.11'
+   ext.springVersion='3.2.2.RELEASE'
+   ext.hessianVersion='4.0.7'
+}

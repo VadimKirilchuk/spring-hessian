@@ -1,0 +1,11 @@
+apply plugin: 'jetty'
+
+dependencies {
+    compile project(':api')
+    compile "org.springframework:spring-webmvc:${springVersion}"
+    compile "com.caucho:hessian:${hessianVersion}"
+}
+
+jettyRun {
+    contextPath = ""
+}
