@@ -1,2 +1,2 @@
-spring-hessian
+spring-hessian-example
 ==============
